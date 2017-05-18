@@ -1,0 +1,42 @@
+@import './_config';
+
+.LogIn {
+  position: absolute;
+  top: calc(50vh - 80px );
+  left: calc(50vw - 132px );
+
+  display: flex;
+
+  width: 240px;
+  padding: 24px;
+
+  background-repeat: no-repeat;
+  background-image: url(../media/section-cap-top.png), url(../media/section-cap-bottom.png);
+  background-position: center top, center bottom;
+  background-size: 100% auto;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+  fieldset.password, fieldset.text {
+    width: 100%;
+    margin-top: 18px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  fieldset.checkbox, button {
+    margin-top: 18px;
+  }
+  &.error {
+    fieldset.checkbox, button {
+      margin-top: 6px;
+    }
+  }
+  i {
+    font-size: 12px;
+
+    margin-top: 12px;
+
+    color: red;
+  }
+}

@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:after, *:before {
+  font-family: 'mrs-eaves', Gesta, Helvetica, sans-serif;
+  line-height: 24px;
+
+  box-sizing: border-box;
+
+  cursor: default;
+  user-select: none;
+  transition: 0.25s ease transform, 0.25s ease opacity, 0.35s ease color, 0.35s ease background;
+}
+
+*:first-child {
+  margin-top: 0;
+}
+
+*:last-child {
+  margin-bottom: 0;
+}

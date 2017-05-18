@@ -1,0 +1,100 @@
+fieldset {
+  font-size: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+fieldset.search, fieldset.password, fieldset.text {
+  font-size: 12px;
+
+  position: relative;
+
+  display: inline-block;
+  overflow: visible;
+
+  height: 24px;
+
+  border-bottom: 1px solid black;
+  label {
+    font-size: 12px;
+    line-height: 12px;
+
+    position: absolute;
+    top: 5px;
+    left: 8px;
+
+    padding: 0 4px;
+
+    pointer-events: none;
+
+    background-color: white;
+  }
+  input {
+    z-index: 1;
+
+    min-width: 100%;
+    margin: 0;
+    padding: 0 12px;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    -webkit-appearance: none;
+    &:valid+label, &:focus+label {
+      transform: translate3d(0, 19px, 0);
+    }
+  }
+}
+
+fieldset.file label, button {
+  font-size: 12px;
+
+  position: relative;
+
+  height: 24px;
+  padding: 0 12px;
+
+  cursor: pointer;
+
+  color: black;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: ' ';
+    transform: translateZ(0);
+
+    background-image: url(../media/button-black.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+  }
+}
+
+fieldset.checkbox {
+  display: inline-block;
+  label {
+    //
+  }
+  input {
+    margin-right: 6px;
+  }
+}
+
+fieldset.file {
+  input {
+    display: none;
+  }
+}
